@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wedding of Yuli & Riezchi</title>
+<link rel="icon" type="image/png" href="SIGER KIRI.jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+  
+:root{--gold:#d6a67a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:#000;color:#fff}
+.slide{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;padding:80px 20px;text-align:center}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-2}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(2px);z-index:-1}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--gold);margin-bottom:20px}
+p{line-height:1.9}
+.box{background:rgba(0,0,0,.55);padding:60px;border-radius:40px;max-width:900px}
+.btn{margin-top:25px;padding:15px 45px;border:none;border-radius:50px;background:var(--gold);color:#000;font-size:16px;cursor:pointer}
+
+.mempelai{display:flex;gap:60px;flex-wrap:wrap;justify-content:center}
+.card{background:rgba(0,0,0,.55);padding:35px;border-radius:40px}
+.foto{width:260px;height:340px;object-fit:cover;margin-bottom:20px}
+.frame{border-radius:30px;border:6px solid var(--gold)}
+
+.save-wrapper{display:flex;gap:40px;flex-wrap:wrap;justify-content:center}
+.save-card{background:rgba(0,0,0,.55);padding:45px;border-radius:35px;width:280px}
+.save-card h2{font-size:48px;margin:10px 0}
+
+.doa-box{display:flex;align-items:center;gap:30px;background:rgba(0,0,0,.55);padding:50px;border-radius:40px;max-width:900px;text-align:left}
+.doa-box img{width:150px;height:200px;object-fit:cover;border-radius:25px;border:4px solid var(--gold)}
+
+.map-box iframe{width:100%;height:300px;border-radius:30px;border:none;margin-top:25px}
+
+form{background:rgba(0,0,0,.55);padding:50px;border-radius:40px;width:100%;max-width:520px}
+input,select,textarea{width:100%;padding:14px;margin:12px 0;border-radius:18px;border:none}
+textarea{height:120px}
+
+.music-btn{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:var(--gold);
+  color:#000;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  cursor:pointer;
+  z-index:99;
+}
+
+.gallery-wrapper{overflow:hidden;max-width:100%}
+.gallery-track{display:flex;gap:20px;animation:slideGallery 25s linear infinite}
+.gallery-track img{width:280px;height:360px;object-fit:cover;border-radius:30px;border:5px solid var(--gold);flex-shrink:0}
+
+@keyframes slideGallery{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+@media (max-width:768px){
+  .slide{padding:60px 15px}
+  .box{padding:35px;border-radius:30px}
+  h1{font-size:26px}
+  h2{font-size:28px}
+  p{font-size:14px}
+  .mempelai{gap:30px}
+  .foto{width:220px;height:300px}
+  .save-card{width:100%;max-width:260px}
+  .doa-box{flex-direction:column;text-align:center}
+  .doa-box img{width:120px;height:160px}
+  .gallery-track img{width:220px;height:280px}
+  form{padding:35px;border-radius:30px}
+}
+/* FIX KHUSUS HP */
+@media (max-width:768px){
+  .overlay{
+    background: rgba(0,0,0,.35);
+    backdrop-filter: none;
+  }
+}
+
+/* FIX TAMPILAN HP AGAR TIDAK TERLALU GELAP & FOTO TIMBUL */
+@media (max-width:768px){
+  .overlay{
+    background: rgba(0,0,0,.35);
+    backdrop-filter:none;
+  }
+}
+  .foto,
+  .frame{
+    box-shadow: 0 18px 40px rgba(0,0,0,.75);
+  }
+
+  .box,
+  .card,
+  .save-card,
+  .doa-box,
+  form{
+    box-shadow: 0 20px 50px rgba(0,0,0,.6);
+  }
+
+/* ===== RAPI TEKS HP ===== */
+@media (max-width:768px){
+  .slide{padding:55px 14px}
+  .box{padding:32px;border-radius:28px}
+
+  h1{font-size:26px}
+  h2{font-size:24px}
+  h3{font-size:20px}
+
+  p{
+    font-size:14px;
+    line-height:1.85;
+    text-align:justify;
+    word-break:break-word;
+  }
+
+  .card p{
+    text-align:center;
+    margin-top:10px;
+  }
+
+  .foto{width:220px;height:300px}
+
+  .save-card{width:100%;max-width:260px}
+
+  .doa-box{
+    flex-direction:column;
+    text-align:center;
+    padding:32px;
+  }
+
+  .doa-box p{text-align:justify}
+
+  form{padding:32px}
+
+  footer p{
+    font-size:14px;
+    line-height:1.8;
+    text-align:center;
+    padding:0 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="music" loop preload="auto" playsinline>
+  <source src="Bermuara.mp3" type="audio/mpeg">
+</audio>
+<div class="music-btn" onclick="toggleMusic()">🎵</div>
+
+<!-- HERO -->
+<section class="slide">
+  <div class="bg" style="background-image:url('SIGER KIRI.jpeg')"></div>
+  <div class="overlay"></div>
+  <div class="box" data-aos="zoom-in">
+    <h1>The Wedding Of</h1>
+    <img src="SIGER KIRI.jpeg" style="width:180px;height:180px;object-fit:cover;border-radius:50%;border:5px solid var(--gold);margin:20px auto;display:block;">
+    <h2>Riezchi & Yuliya</h2>
+    <p>“Dua insan dipertemukan oleh takdir, disatukan oleh cinta, dan diikat dalam janji suci.”</p>
+    <button class="btn" id="btnBuka">Buka Undangan</button>
+  </div>
+</section>
+
+<!-- ASSALAM -->
+<section class="slide">
+  <div class="bg" style="background-image:url('wesd.jpg')"></div>
+  <div class="overlay"></div>
+  <div class="box" data-aos="fade-up">
+    <h2>Assalamu’alaikum Wr. Wb.</h2>
+    <p>Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.</p>
+  </div>
+</section>
+
+<!-- MEMPELAI -->
+<section class="slide">
+  <div class="bg" style="background-image:url('wesd.jpg')"></div>
+  <div class="overlay"></div>
+  <div class="mempelai">
+    <div class="card" data-aos="fade-right">
+      <img src="liya.jpeg" class="foto frame">
+      <h3>Yuli Yanti</h3>
+      <p>Anak ke-5 Putri dari <br>Bpk. Turyadi Glr. Stn Tuha & Ibu Indrawati Glr. Stn Pesayan</p>
+    </div>
+    <div class="card" data-aos="fade-left">
+      <img src="RICI.jpeg" class="foto frame">
+      <h3>Riezchi Angga Adtiya</h3>
+      <p>Anak ke-2 Putra dari <br>Bpk. Suwandi Glr. Minak Perbou & Ibu Megawati Glr. Minak Serumpun</p>
+    </div>
+  </div>
+</section>
+
+<!-- SAVE DATE -->
+<section class="slide">
+  <div class="bg" style="background-image:url('wesd.jpg')"></div>
+  <div class="overlay"></div>
+  <div class="save-wrapper" data-aos="zoom-in">
+    <div class="save-card">
+      <h3>Akad Nikah</h3>
+      <p>Sabtu</p>
+      <h2>24</h2>
+      <p>Januari 2026</p>
+    </div>
+    <div class="save-card">
+      <h3>Resepsi</h3>
+      <p>Minggu</p>
+      <h2>25</h2>
+      <p>Januari 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="slide">
+  <div class="bg" style="background-image:url('wesd.jpg')"></div>
+  <div class="overlay"></div>
+  <div class="box map-box" data-aos="fade-up">
+    <h2>Lokasi Acara</h2>
+    <p>Lempuyang Bandar, Kec. Way Pengubuan, Lampung Tengah</p>
+    <iframe src="https://www.google.com/maps?q=Lempuyang+Bandar+Way+Pengubuan+Lampung+Tengah&output=embed"></iframe>
+    <a href="https://www.google.com/maps?q=Lempuyang+Bandar+Way+Pengubuan+Lampung+Tengah" target="_blank" class="btn">Buka Google Maps</a>
+  </div>
+</section>
+
+<!-- DOA -->
+<section class="slide">
+  <div class="bg" style="background-image:url('wesd.jpg')"></div>
+  <div class="overlay"></div>
+  <div class="doa-box" data-aos="fade-up">
+    <img src="DUDUK HITAM.jpeg">
+    <div>
+      <p>Ya Allah, satukanlah kami dalam ikatan yang Engkau ridhoi, limpahkan keberkahan, cinta, dan ketentraman sepanjang usia pernikahan kami. Jadikan kami pasangan yang saling menguatkan, setia dalam iman, dan sabar dalam setiap ujian.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GIFT -->
+<section class="slide">
+  <div class="bg" style="background-image:url('wesd.jpg')"></div>
+  <div class="overlay"></div>
+  <div class="box" data-aos="zoom-in">
+    <h2>Wedding Gift</h2>
+    <img src="SeaBank.webp" width="150">
+    <p>901422202258<br>a.n Yuli Yanti</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="slide">
+  <div class="bg" style="background-image:url('wesd.jpg')"></div>
+  <div class="overlay"></div>
+  <div class="box" data-aos="fade-up">
+    <h2>Our Moments</h2>
+    <p>Setiap langkah adalah cerita, setiap senyum adalah kenangan.</p>
+    <div class="gallery-wrapper">
+      <div class="gallery-track">
+        <img src="SIGER DEPAN.jpeg">
+        <img src="SIGER KIRI.jpeg">
+        <img src="both.jpeg">
+        <img src="sender.jpeg">
+        <img src="slip.jpeg">
+        <img src="hadap.jpeg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVASI -->
+<section class="slide">
+  <div class="bg" style="background-image:url('wesd.jpg')"></div>
+  <div class="overlay"></div>
+  <form data-aos="fade-up" id="formReservasi">
+    <h2>Reservasi Kehadiran</h2>
+    <p>Hadir: <b id="hadirCount">0</b> | Tidak Hadir: <b id="tidakHadirCount">0</b></p>
+    <input type="text" id="nama" placeholder="Nama" required>
+    <select id="status">
+      <option value="hadir">Hadir</option>
+      <option value="tidak">Tidak Hadir</option>
+    </select>
+    <textarea id="pesan" placeholder="Ucapan & Doa"></textarea>
+    <button class="btn" type="submit">Kirim</button>
+  </form>
+</section>
+
+<footer>
+  <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+  <br>
+  <p>Dengan cinta,<br><strong>Riezchi & Yuliya</strong></p>
+</footer>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({ duration:1200 });
+
+const music = document.getElementById("music");
+const btnBuka = document.getElementById("btnBuka");
+let started = false;
+
+function startMusic(){
+  if(!started){
+    music.muted = false;
+    music.play().then(()=>{
+      started = true;
+    }).catch(()=>{});
+  }
+  document.removeEventListener("touchstart", startMusic);
+  document.removeEventListener("click", startMusic);
+}
+
+// trigger SENTUHAN PERTAMA DI HP
+document.addEventListener("touchstart", startMusic, { once:true });
+document.addEventListener("click", startMusic, { once:true });
+
+// tombol buka undangan
+btnBuka.addEventListener("click", () => {
+  startMusic();
+  window.scrollTo({ top: innerHeight, behavior:"smooth" });
+});
+
+function toggleMusic(){
+  music.paused ? music.play() : music.pause();
+}
+
+const form = document.getElementById("formReservasi");
+const hadirCount = document.getElementById("hadirCount");
+const tidakHadirCount = document.getElementById("tidakHadirCount");
+
+let hadir = 0;
+let tidakHadir = 0;
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  const nama = document.getElementById("nama").value.trim();
+  const status = document.getElementById("status").value;
+
+  if(nama === ""){
+    alert("Nama harus diisi");
+    return;
+  }
+
+  status === "hadir" ? hadir++ : tidakHadir++;
+  hadirCount.textContent = hadir;
+  tidakHadirCount.textContent = tidakHadir;
+
+  alert("Terima kasih atas konfirmasi kehadirannya 🙏");
+  form.reset();
+});
+
+</script>
+
+</body>
+</html>
